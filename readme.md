@@ -2,27 +2,48 @@
 
 깃허브 tag, release, packages들을 삭제합니다.
 
+## Setup
+
+.env 파일을 root에서 만들고 아래와 같이 내용을 채워줍니다.
+
+```
+GITHUB_TOKEN=YOUR GITHUB PAT
+OWNER=nwaycorp
+REPO_NAME=nwave
+PACKAGE_TYPE=npm
+```
+
 ## Scripts
 
 ### delete:all-package-versions
 
-패키지 버전을 모두 삭제합니다.
+Github Packages 버전을 모두 삭제합니다.
 
 ### delete:releases
 
-release를 모두 삭제합니다.
+Github Release를 모두 삭제합니다.
 
 ### delete:tags
 
-tag를 모두 삭제합니다.
+Github remote Tag를 모두 삭제합니다.
+
+만약 Local Git Tag를 모두 삭제할 필요가 있다면 아래 명령어 사용
+
+```
+$ git tag | xargs -L 1 | xargs git tag --delete
+```
 
 ## References
 
+### Github API
+
 https://docs.github.com/en/rest?apiVersion=2022-11-28
+
+### Github Octokit
 
 https://octokit.github.io/rest.js/v19
 
-### node + typescript
+### node + typescript + ESM
 
 https://stackoverflow.com/questions/62096269/cant-run-my-node-js-typescript-project-typeerror-err-unknown-file-extension
 
