@@ -24,13 +24,13 @@ async function getPackages() {
 
 async function getPackageNames() {
   const packages = await getPackages();
-  const nwavePackageNames = packages
+  const packageNames = packages
     ?.filter(
       (pkg) =>
         pkg.repository?.html_url === `https://github.com/${OWNER}/${REPO_NAME}`
     )
     .map((pkg) => pkg.name);
-  return nwavePackageNames;
+  return packageNames;
 }
 
 async function getPackageVersions(name: string) {

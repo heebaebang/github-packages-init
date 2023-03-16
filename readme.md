@@ -4,7 +4,7 @@
 
 ## Setup
 
-.env 파일을 root에서 만들고 아래와 같이 내용을 채워줍니다.
+.env 파일을 root에서 만들고 자신의 토큰 및 설정으로 아래와 같이 내용을 채워줍니다.
 
 ```
 GITHUB_TOKEN=YOUR GITHUB PAT
