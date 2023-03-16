@@ -1,0 +1,25 @@
+{
+  "name": "github-delete-packages",
+  "description": "Delete all packages from a GitHub repository",
+  "version": "1.0.0",
+  "main": "index.js",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "@octokit/rest": "^19.0.7",
+    "axios": "^1.3.4",
+    "readline-sync": "^1.4.10"
+  },
+  "scripts": {
+    "delete:all-package-versions": "node --experimental-specifier-resolution=node --loader ts-node/esm src/package-versions.ts",
+    "delete:releases": "node --experimental-specifier-resolution=node --loader ts-node/esm src/releases.ts",
+    "delete:tags": "node --experimental-specifier-resolution=node --loader ts-node/esm src/tags.ts"
+  },
+  "devDependencies": {
+    "@types/node": "^18.15.3",
+    "@types/readline-sync": "^1.4.4",
+    "dotenv": "^16.0.3",
+    "ts-node": "^10.9.1",
+    "typescript": "^4.9.5"
+  }
+}
